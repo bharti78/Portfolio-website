@@ -1,0 +1,51 @@
+<div class="experience-card" 
+     [@cardHover]="hoverState"
+     (mouseenter)="onHover(true)"
+     (mouseleave)="onHover(false)">
+  
+  <div class="card-header">
+    <img [src]="experience.img" 
+         [alt]="experience.company"
+         class="company-logo"
+         loading="lazy"
+         (error)="onImageError($event)" />
+    
+    <div class="header-content">
+      <h3 class="role-title">{{ experience.role }}</h3>
+      <h4 class="company-name">{{ experience.company }}</h4>
+      <p class="date-range">{{ experience.date }}</p>
+    </div>
+  </div>
+  
+  <div class="card-body">
+    <p class="description">{{ experience.desc }}</p>
+    
+    <div class="skills-section">
+      <h5 class="skills-title">Skills & Technologies:</h5>
+      <div class="skills-list">
+        @for (skill of experience.skills; track skill) {
+          <span class="skill-tag"
+                [appTooltip]="skill"
+                tooltipPosition="top">
+            {{ skill }}
+          </span>
+        }
+      </div>
+    </div>
+    
+    @if (experience.doc) {
+      <div class="card-footer">
+        <a [href]="experience.doc" 
+           target="_blank" 
+           class="doc-link"
+           appTooltip="View Certificate"
+           tooltipPosition="top">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+          </svg>
+          View Document
+        </a>
+      </div>
+    }
+  </div>
+</div>

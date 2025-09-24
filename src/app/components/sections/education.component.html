@@ -1,0 +1,31 @@
+<section id="education" class="education-container">
+  <div class="education-wrapper">
+    <h2 class="education-title" @fadeInUp>Education</h2>
+    <p class="education-desc" @fadeInUp>
+      My education has been a journey of self-discovery and growth. My educational details are as follows.
+    </p>
+   
+    <div class="timeline-container" @staggerEducation>
+      <div class="timeline-line"></div>
+      
+      @for (education of educationList(); track education.id) {
+        <div class="timeline-item" [class]="$index % 2 === 0 ? 'timeline-left' : 'timeline-right'">
+          <div class="timeline-connector">
+            <div class="timeline-image-container">
+              <img [src]="education.img" 
+                   [alt]="education.school"
+                   class="timeline-company-logo"
+                   loading="lazy"
+                   (error)="onTimelineImageError($event)" />
+            </div>
+          </div>
+          
+          <app-education-card 
+            [education]="education"
+            [index]="$index">
+          </app-education-card>
+        </div>
+      }
+    </div>
+  </div>
+</section>

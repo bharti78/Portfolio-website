@@ -1,0 +1,33 @@
+<div class="skill-card" 
+     [@hover]="hoverState"
+     (mouseenter)="onHover(true)"
+     (mouseleave)="onHover(false)">
+  
+  <!-- Card Header with Content Projection -->
+  <div class="skill-header">
+    <ng-content select="[slot=header]">
+      <h3 class="skill-title">{{ skillCategory.title }}</h3>
+    </ng-content>
+  </div>
+  
+  <!-- Skills List -->
+  <div class="skill-list">
+    @for (skill of skillCategory.skills; track skill.name) {
+      <div class="skill-item"
+           [appTooltip]="skill.name"
+           tooltipPosition="top">
+        <img [src]="skill.image" 
+             [alt]="skill.name" 
+             class="skill-image"
+             loading="lazy"
+             (error)="onImageError($event)" />
+        <span class="skill-name">{{ skill.name }}</span>
+      </div>
+    }
+  </div>
+  
+  <!-- Footer Content Projection -->
+  <div class="skill-footer">
+    <ng-content select="[slot=footer]"></ng-content>
+  </div>
+</div>

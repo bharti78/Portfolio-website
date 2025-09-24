@@ -1,0 +1,32 @@
+<section id="projects" class="projects-container">
+  <div class="projects-wrapper">
+    <h2 class="projects-title" @fadeInUp>Projects</h2>
+    <p class="projects-desc" @fadeInUp>
+      I have worked on a wide range of projects. From web apps to mobile applications. 
+      Here are some of my recent projects.
+    </p>
+    
+    <div class="projects-grid" @staggerProjects>
+      @for (project of allProjects(); track project.id) {
+        <app-project-card 
+          [project]="project"
+          [index]="$index"
+          (cardClick)="openProjectModal($event)">
+        </app-project-card>
+      } @empty {
+        <div class="no-projects">
+          <p>No projects found for the selected filter.</p>
+        </div>
+      }
+    </div>
+  </div>
+  
+  <!-- Project Modal -->
+  @if (selectedProject()) {
+    <app-project-modal
+      [project]="selectedProject"
+      [isOpen]="isModalOpen"
+      (close)="closeProjectModal()">
+    </app-project-modal>
+  }
+</section>

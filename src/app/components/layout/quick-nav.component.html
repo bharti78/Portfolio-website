@@ -1,0 +1,34 @@
+<div class="quick-nav-container" [@slideIn]="isVisible() ? 'visible' : 'hidden'">
+  <div class="quick-nav-wrapper">
+    <div class="quick-nav-header">
+      <span class="nav-title">Connect</span>
+    </div>
+    
+    <div class="quick-nav-links">
+      @for (link of socialLinks; track link.name) {
+        <a (click)="openLink(link.url, $event)"
+           (mouseenter)="onLinkHover(link, true)"
+           (mouseleave)="onLinkHover(link, false)"
+           [@linkHover]="link.hoverState()"
+           class="quick-nav-link"
+           [title]="link.name"
+           [style.--link-color]="link.color">
+          
+          <svg class="link-icon" 
+               width="20" 
+               height="20" 
+               viewBox="0 0 24 24" 
+               fill="currentColor">
+            <path [attr.d]="link.icon"></path>
+          </svg>
+          
+          <span class="link-label">{{ link.name }}</span>
+        </a>
+      }
+    </div>
+    
+    <div class="quick-nav-footer">
+      <div class="connection-line"></div>
+    </div>
+  </div>
+</div>

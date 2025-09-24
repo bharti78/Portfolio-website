@@ -1,0 +1,68 @@
+<section id="about" class="hero-container">
+  <div class="hero-bg">
+    <!-- Stars Canvas will go here -->
+    <div class="hero-bg-animation"></div>
+  </div>
+  
+  <div class="hero-inner-container">
+    <div class="hero-left-container" @fadeInLeft>
+      <div class="hero-text-container">
+        <h1 class="title" @fadeInUp>
+          Hi, I am <br />
+          <span class="name">{{ bio().name }}</span>
+        </h1>
+        
+        <div class="text-loop" @fadeInUp>
+          I am a
+          <span class="span typewriter-container">
+            <span class="typewriter-text" 
+                  [class.typing]="isTyping()" 
+                  [class.deleting]="isDeleting()">
+              {{ displayedText() }}
+            </span>
+            <span class="cursor" 
+                  [class.visible]="showCursor()" 
+                  [class.typing-cursor]="isTyping() || isDeleting()">|</span>
+          </span>
+        </div>
+      </div>
+      
+      <p class="subtitle" @fadeInUp>
+        {{ bio().description }}
+      </p>
+      
+      <div class="resume-buttons-container" @fadeInUp>
+        <a [href]="bio().resume" 
+           target="_blank" 
+           class="resume-button primary"
+           appTooltip="View Resume Online"
+           tooltipPosition="top">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
+          </svg>
+          Check Resume
+        </a>
+        
+        <a [href]="localResumeUrl" 
+           download="Resume_Bharti.pdf"
+           class="resume-button secondary"
+           appTooltip="Download Resume PDF"
+           tooltipPosition="top">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+          </svg>
+          Download Resume
+        </a>
+      </div>
+    </div>
+    
+    <div class="hero-right-container" @fadeInRight>
+      <div class="image-container float-animation">
+        <img [src]="heroImage" 
+             [alt]="bio().name" 
+             class="hero-image"
+             loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+<section id="skills" class="skills-container">
+  <div class="skills-wrapper">
+    <h2 class="skills-title" @fadeInUp>Skills</h2>
+    <p class="skills-desc" @fadeInUp>
+      Here are some of my skills on which I have been working on for the past 3 years.
+    </p>
+    
+    <div class="skills-grid" @staggerCards>
+      @for (skillCategory of skills(); track skillCategory.title) {
+        <app-skill-card 
+          [skillCategory]="skillCategory"
+          [index]="$index">
+        </app-skill-card>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+<div class="education-card" 
+     [@cardHover]="hoverState()"
+     (mouseenter)="onHover(true)"
+     (mouseleave)="onHover(false)">
+  
+  <div class="card-header">
+    <img [src]="education.img" 
+         [alt]="education.school"
+         class="school-logo"
+         loading="lazy"
+         (error)="onImageError($event)" />
+    
+    <div class="header-content">
+      <h3 class="school-title">{{ education.school }}</h3>
+      <h4 class="degree-name">{{ education.degree }}</h4>
+      <p class="date-range">{{ education.date }}</p>
+    </div>
+  </div>
+  
+  <div class="card-body">
+    <div class="grade-section">
+      <span class="grade-label">Grade:</span>
+      <span class="grade-value">{{ education.grade }}</span>
+    </div>
+    
+    <p class="description">{{ education.desc }}</p>
+  </div>
+</div>

@@ -1,0 +1,158 @@
+.footer {
+  background: linear-gradient(180deg, var(--bg) 0%, rgba(17, 25, 40, 0.95) 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 0 20px;
+  margin-top: 100px;
+}
+
+.footer-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--text-primary);
+  gap: 2px;
+}
+
+.color-text {
+  color: var(--primary);
+  font-size: 32px;
+}
+
+.primary-color {
+  color: var(--primary);
+}
+
+.footer-nav {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-link:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.social-media {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(133, 76, 230, 0.1);
+  border: 1px solid rgba(133, 76, 230, 0.3);
+  border-radius: 50%;
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(133, 76, 230, 0.4);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 24px;
+  width: 100%;
+}
+
+.copyright {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin: 0;
+}
+
+.made-with {
+  color: var(--text-secondary);
+  font-size: 12px;
+  margin: 0;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 32px 0 16px;
+    margin-top: 60px;
+  }
+
+  .footer-wrapper {
+    padding: 0 16px;
+    gap: 24px;
+  }
+
+  .footer-logo {
+    font-size: 20px;
+  }
+
+  .color-text {
+    font-size: 28px;
+  }
+
+  .footer-nav {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-link {
+    font-size: 14px;
+  }
+
+  .social-media {
+    gap: 16px;
+  }
+
+  .social-link {
+    width: 44px;
+    height: 44px;
+  }
+
+  .footer-bottom {
+    gap: 6px;
+    padding-top: 20px;
+  }
+
+  .copyright {
+    font-size: 12px;
+  }
+
+  .made-with {
+    font-size: 11px;
+  }
+}

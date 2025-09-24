@@ -1,0 +1,31 @@
+<section id="experience" class="experience-container">
+  <div class="experience-wrapper">
+    <h2 class="experience-title" @fadeInUp>Experience</h2>
+    <p class="experience-desc" @fadeInUp>
+      My work experience as a software engineer and working on different companies and projects.
+    </p>
+    
+    <div class="timeline-container" @staggerExperience>
+      <div class="timeline-line"></div>
+      
+      @for (experience of experiences(); track experience.id) {
+        <div class="timeline-item" [class]="$index % 2 === 0 ? 'timeline-left' : 'timeline-right'">
+          <div class="timeline-connector">
+            <div class="timeline-image-container">
+              <img [src]="experience.img" 
+                   [alt]="experience.company"
+                   class="timeline-company-logo"
+                   loading="lazy"
+                   (error)="onTimelineImageError($event)" />
+            </div>
+          </div>
+          
+          <app-experience-card 
+            [experience]="experience"
+            [index]="$index">
+          </app-experience-card>
+        </div>
+      }
+    </div>
+  </div>
+</section>
