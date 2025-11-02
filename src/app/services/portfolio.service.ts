@@ -20,7 +20,7 @@ export class PortfolioService {
       "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
     github: "https://github.com/bharti78",
     resume:
-      "https://drive.google.com/file/d/18k7IAXyK9T_hJoqf-bJS6xRctNn6N1F5/view",
+      "https://drive.google.com/file/d/1s-u04faW7I7TZRMRkoCo6M8h08mr_N1P/view?usp=sharing",
     linkedin: "https://www.linkedin.com/in/bhartidhote/",
     twitter: "https://x.com/BHARTIDHOT71091",
     insta: "https://www.instagram.com/sereneskies19/",
@@ -218,7 +218,7 @@ export class PortfolioService {
         "Performance Optimization",
         "Collaboration with UI/UX, QA, DevOps",
         "Scalable Product Development",
-    ]    
+    ]
     },
     {
       id: 1,
@@ -401,7 +401,7 @@ export class PortfolioService {
 
   updateProject(id: number, updates: Partial<Project>) {
     this.projectsData.update(current =>
-      current.map(project => 
+      current.map(project =>
         project.id === id ? { ...project, ...updates } : project
       )
     );
@@ -411,7 +411,7 @@ export class PortfolioService {
   loadPortfolioData(): Observable<boolean> {
     this.loading.set(true);
     this.error.set(null);
-    
+
     // Simulate API delay
     return new Observable(observer => {
       setTimeout(() => {
