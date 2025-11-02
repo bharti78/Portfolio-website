@@ -55,14 +55,14 @@ export class HeroComponent implements OnInit {
 
   bio = this.portfolioService.bio;
   heroImage = 'assets/images/HeroImage1.png';
-  localResumeUrl = 'assets/docs/updatedResumeAug2025.pdf';
-  
+  localResumeUrl = 'assets/docs/Resume_Bharti.pdf';
+
   currentRoleIndex = signal(0);
   displayedText = signal('');
   isTyping = signal(false);
   isDeleting = signal(false);
   showCursor = signal(true);
-  
+
   private typeSpeed = 120; // milliseconds per character when typing (slightly slower for readability)
   private deleteSpeed = 60; // milliseconds per character when deleting
   private pauseBeforeDelete = 2500; // pause before starting to delete (longer to read)
@@ -85,18 +85,18 @@ export class HeroComponent implements OnInit {
 
     while (true) {
       const currentRole = roles[currentIndex];
-      
+
       // Type the current role
       await this.typeText(currentRole);
-      
+
       // Pause before deleting
       await this.delay(this.pauseBeforeDelete);
-      
+
       // Delete the current role
       await this.deleteText();
-      
+
       await this.delay(this.pauseBeforeNext);
-      
+
       currentIndex = (currentIndex + 1) % roles.length;
       this.currentRoleIndex.set(currentIndex);
     }
@@ -105,24 +105,24 @@ export class HeroComponent implements OnInit {
   private async typeText(text: string): Promise<void> {
     this.isTyping.set(true);
     this.isDeleting.set(false);
-    
+
     for (let i = 0; i <= text.length; i++) {
       this.displayedText.set(text.substring(0, i));
       await this.delay(this.typeSpeed);
     }
-    
+
     this.isTyping.set(false);
   }
 
   private async deleteText(): Promise<void> {
     this.isDeleting.set(true);
     const currentText = this.displayedText();
-    
+
     for (let i = currentText.length; i >= 0; i--) {
       this.displayedText.set(currentText.substring(0, i));
       await this.delay(this.deleteSpeed);
     }
-    
+
     this.isDeleting.set(false);
   }
 
