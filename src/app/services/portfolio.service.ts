@@ -135,6 +135,35 @@ export class PortfolioService {
       ],
     },
     {
+      title: "AI/ML",
+      skills: [
+        {
+          name: "TensorFlow",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/1200px-Tensorflow_logo.svg.png",
+        },
+        {
+          name: "Keras",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Keras_logo.svg/1200px-Keras_logo.svg.png",
+        },
+        {
+          name: "Scikit-learn",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png",
+        },
+        {
+          name: "NumPy",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/NumPy_logo_2020.svg/1200px-NumPy_logo_2020.svg.png",
+        },
+        {
+          name: "Pandas",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/1200px-Pandas_logo.svg.png",
+        },
+        {
+          name: "Matplotlib",
+          image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Matplotlib_icon.svg/1200px-Matplotlib_icon.svg.png",
+        },
+      ],
+    },
+    {
       title: "Deployment",
       skills: [
         {
@@ -374,6 +403,24 @@ export class PortfolioService {
       tags: ["JavaScript", "HTML", "CSS"],
       github: "https://github.com/bharti78/E-Commerce-Website",
       webapp: "https://e-commerce-website-rosy-beta.vercel.app/",
+    },
+    {
+      id: 12,
+      title: "Book Recommender System",
+      description: "Book Recommender System is a web-based application that suggests books to users based on their preferences and interactions. It focuses on delivering personalized recommendations using data-driven logic, providing an intuitive interface for discovering new books efficiently.",
+      image: "assets/images/Book-Recommender-System.png",
+      tags: ["Python", "Machine Learning", "Data Analysis", "Recommendation System"],
+      github: "https://github.com/bharti78/Book-Recommender-System",
+      webapp: "https://book-recommender-system-si4r.onrender.com/",
+    },
+    {
+      id: 2,
+      title: "YouTube Video Transcribe",
+      description: "YouTube Video Transcribe is a Python web application that lets users convert the audio of any public YouTube video into readable text. Simply enter a YouTube video URL to quickly fetch available captions or generate a transcript, making it useful for note-taking, studying, or content creation.",
+      image: "assets/images/Youtube-Video-Transcribe.png",
+      tags: ["Python", "Flask", "youtube-transcript-api", "Transcription", "Web App"],
+      github: "https://github.com/bharti78/Youtube-Video-Transcribe",
+      webapp: "https://youtube-video-transcribe-1.onrender.com/",
     },
   ]);
 
