@@ -1,6 +1,12 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
 .project-card {
   width: 100%;
   max-width: 400px;
+  height: 100%;
   background-color: rgba(17, 25, 40, 0.83);
   border: 1px solid rgba(255, 255, 255, 0.125);
   border-radius: 16px;
@@ -10,6 +16,8 @@
   position: relative;
   transform-origin: center;
   will-change: transform;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -87,6 +95,7 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 12px;
 }
 

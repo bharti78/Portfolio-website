@@ -323,6 +323,26 @@ export class PortfolioService {
   // Projects data as signal
   private projectsData = signal<Project[]>([
     {
+      id: 13,
+      title: "AI for Intelligent Sales & Revenue Operations",
+      description:
+        "A GenAI-powered hackathon project focused on improving sales and revenue operations through smarter decision support, workflow automation, and actionable business insights. The platform is designed to help teams analyze operational data faster, surface high-value opportunities, and streamline repetitive sales processes through an intuitive web experience. Built as a practical product concept, it demonstrates how AI can support revenue teams with better visibility, faster responses, and more efficient execution.",
+      image: "assets/images/revenue.png",
+      tags: ["GenAI", "Sales Ops", "Revenue Operations", "AI Automation", "Vercel"],
+      github: "https://github.com/bharti78/ET-Gen-AI-Hackathon-AI-for-Intelligent-Sales-Revenue-Operations",
+      webapp: "https://et-gen-ai-hackathon-ai-for-intellig.vercel.app/",
+    },
+    {
+      id: 14,
+      title: "VoyageHack",
+      description:
+        "A travel-focused web application built to simplify trip discovery and booking exploration through a clean, user-friendly interface. VoyageHack uses OpenAI and NLP capabilities to make the travel experience smarter by improving search relevance, understanding user intent, and supporting more natural interactions during trip planning. The project highlights practical product thinking around usability, responsive design, and building engaging travel-tech experiences for real users.",
+      image: "assets/images/tbo.png",
+      tags: ["Travel Tech", "OpenAI", "NLP", "Responsive Design", "Booking Flow", "Vercel"],
+      github: "https://github.com/bharti78/VoyageHack",
+      webapp: "https://tbo-project.vercel.app/",
+    },
+    {
       id: 10,
       title: "Crave - Corner Restaurant Website",
       description:
