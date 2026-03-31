@@ -232,7 +232,7 @@ export class PortfolioService {
       img: "https://media.licdn.com/dms/image/v2/D4D0BAQEDFqXHKKgdNw/company-logo_200_200/company-logo_200_200/0/1694257912595/inditech_technology_services_private_limited_logo?e=2147483647&v=beta&t=C7vb55wLgkw5hbA-ZhiJ7tCX10lJCN0zyBQkFI49xMk",
       role: "Product Development Intern",
       company: "Inditech Technology Services Pvt. Ltd.",
-      date: "Apr 2025 - Present",
+      date: "Apr 2025 - Jan 2026",
       desc: "Currently working at Inditech Technology Services Pvt. Ltd. as a Product Development Intern (Remote). I have developed 3+ real-time healthcare products using Python, Django, and PHP, integrating 20+ secure REST APIs with 99.9% uptime. I collaborate closely with UI/UX, QA, and DevOps teams to deliver scalable, production-ready applications, optimizing backend performance by 30% through efficient Django ORM queries and caching techniques.",
       skills: [
         "Python",
