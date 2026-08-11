@@ -55,7 +55,8 @@ export class HeroComponent implements OnInit {
 
   bio = this.portfolioService.bio;
   heroImage = 'assets/images/HeroImage1.png';
-  localResumeUrl = 'assets/docs/Resume_Bharti.pdf';
+  localResumeUrl = 'assets/docs/Resume_Bharti_ (6).pdf';
+
 
   currentRoleIndex = signal(0);
   displayedText = signal('');

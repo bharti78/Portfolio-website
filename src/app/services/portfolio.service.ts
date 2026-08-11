@@ -20,7 +20,7 @@ export class PortfolioService {
       "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
     github: "https://github.com/bharti78",
     resume:
-      "https://drive.google.com/file/d/1DlpUqqnub6w84aFqtbppzhqWjNfMUOs6/view?usp=sharing",
+      "https://drive.google.com/file/d/18NfL9771853-wdfUvUQ2DH5sOT4MmRGS/view?usp=sharing",
     linkedin: "https://www.linkedin.com/in/bhartidhote/",
     twitter: "https://x.com/BHARTIDHOT71091",
     insta: "https://www.instagram.com/sereneskies19/",
@@ -322,6 +322,21 @@ export class PortfolioService {
 
   // Projects data as signal
   private projectsData = signal<Project[]>([
+
+    { id: 15,
+      title: "AI Agent Workflow Builder",
+      description: "A full-stack AI workflow automation platform built to enable users to create, manage, and execute multi-step agent workflows. The application uses Next.js, TypeScript, Nhost, Hasura, PostgreSQL, and GraphQL to provide secure authentication, organization-based access control, workflow execution, and real-time run-status tracking through GraphQL subscriptions.",
+      image: "assets/images/AI-agent-builder.png",
+      tags: [ "AI Agents", "Workflow Automation", "Next.js", "TypeScript", "GraphQL", "PostgreSQL", "Nhost", "Hasura" ],
+      github: "https://github.com/bharti78/AI-Agent-Workflow-Builder-Full-Stack-Assignment",
+      webapp: "https://ai-agent-workflow-builder-full-stac-theta.vercel.app/",
+    },
+    { id: 15,
+      title: "Retrieval-Augmented Generation (RAG) Application",
+      description: "A document-grounded question-answering application that extracts and chunks PDF content, generates semantic embeddings using Sentence Transformers, and stores them in Qdrant for vector similarity search. The system retrieves relevant document context and uses OpenRouter LLMs to generate grounded answers with document, page, and snippet citations while preventing unsupported responses.", image: "assets/images/RAG.png",
+      tags: [ "RAG", "Python", "Qdrant", "Sentence Transformers", "OpenRouter", "LLM", "Vector Search", "PDF Processing" ],
+      github: "https://github.com/bharti78/Retrieval-Augmented-Generation-RAG-application",
+      webapp: "https://github.com/bharti78/Retrieval-Augmented-Generation-RAG-application", },
     {
       id: 13,
       title: "AI for Intelligent Sales & Revenue Operations",
