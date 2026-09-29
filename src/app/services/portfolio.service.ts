@@ -301,9 +301,9 @@ export class PortfolioService {
     {
       id: 2,
       img: 'https://miro.medium.com/v2/resize:fit:400/1%2AZfYWXN0zA6TqQQ7wGNJUOg.jpeg',
-      role: 'GirlScript Summer of Code 2025 Contributor',
+      role: 'GirlScript Summer of Code 2026 Contributor',
       company: 'GirlScript',
-      date: 'Jul 2025 - Present',
+      date: 'Jul 2026 - Present',
       desc: 'Worked as an Open Source Contributor in GirlScript Summer of Code (GSSoC), contributing to real-world projects and collaborating with the developer community.',
       skills: ['ReactJS', 'HTML', 'CSS', 'JavaScript', 'GitHub', 'Team work'],
     },
