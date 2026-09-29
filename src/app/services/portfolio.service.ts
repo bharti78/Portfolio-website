@@ -316,8 +316,8 @@ export class PortfolioService {
       img: 'assets/images/iiitk.png',
       school: 'Indian Institute of Information Technology, Kota',
       date: 'Aug 2023 - Sep 2027',
-      grade: '6.42 CGPA',
-      desc: "I am currently pursuing a Bachelor's degree in Electronics and Communication at Indian Institute of Information Technology, Kota. I have completed 4 semesters and have a CGPA of 6.42. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming in C++, Database Management Systems, Operating Systems, among others.",
+      grade: '6.55 CGPA',
+      desc: "I am currently pursuing a Bachelor's degree in Electronics and Communication at Indian Institute of Information Technology, Kota. I have completed 4 semesters and have a CGPA of 6.55. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming in C++, Database Management Systems, Operating Systems, among others.",
       degree: 'Bachelor of Technology - BTech, Computer Science and Engineering',
     },
     {
